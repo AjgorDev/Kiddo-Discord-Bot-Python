@@ -138,6 +138,7 @@ async def on_message(message):
 		helpemb.add_field(name='$iq', value = 'shows your IQ', inline = False)
 		helpemb.add_field(name='$weekend', value = 'shows when the weekend will start', inline = False)
 		helpemb.add_field(name='$lenny', value = '( ͡° ͜ʖ ͡°)', inline = False)
+		helpemb.add_field(name='$coinflip', value = 'flips a coin', inline = False)
 		helpemb.add_field(name='$report [name] <BETA>', value = 'report some bad guys like a boss :sunglasses:', inline = False)
 		helpemb.add_field(name='$undo-report <BETA>', value = 'deletes your last report', inline = False)
 		await message.channel.send(f'**{message.author}**')
@@ -147,12 +148,16 @@ async def on_message(message):
 	
 	if message.content.startswith('$report'):
 		await message.add_reaction('❗')
-		await message.channel.send(f'**{message.author}**, your report has been sent!')
+		report = discord.Embed(title = 'Your report has been sent ✅', color = 0x71368a)
+		await message.channel.send(f'**{message.author}**')
+		await message.channel.send(embed=report)
 		print(message.author,':',message.content)
 
 	if message.content.startswith('$undo-report'):
 		await message.add_reaction('✅')
-		await message.channel.send(f'**{message.author}**, your report has been deleted!')
+		undoreport = discord.Embed(title = 'Your report has been deleted ✅', color = 0x71368a)
+		await message.channel.send(f'**{message.author}**')
+		await message.channel.send(embed=undoreport)
 		print(message.author,':',message.content)
 
 client.run(TOKEN)
