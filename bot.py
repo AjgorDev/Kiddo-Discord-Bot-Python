@@ -45,7 +45,7 @@ async def on_message(message):
 
 	if message.content.startswith('$about'):
 		await message.add_reaction('📬')
-		about = discord.Embed(title = '**Hey, My name is Kiddo!**\n***I was made by Ajgor#0001.***\n\n**I am here to tell you some jokes and have fun with this server users!**\n**Use** ***$help*** **command for list of all commands!**', description = '[Invite me!](https://discord.com/api/oauth2/authorize?client_id=819276513140670466&permissions=37088832&scope=bot) | [Donate](https://streamlabs.com/ajgor_rycerski_boj/tip) | [Vote on us!](https://top.gg/bot/819276513140670466)' , color = 0x71368a)
+		about = discord.Embed(title = '**Hey, My name is Kiddo!**\n***I was made by Ajgor#0001.***\n\n**I am here to tell you some jokes and have fun with this server users!**\n**Use** ***$help*** **command for list of all commands!**', description = '[Invite me!](https://discord.com/api/oauth2/authorize?client_id=819276513140670466&permissions=37088832&scope=bot) | [Donate](https://streamlabs.com/ajgor_rycerski_boj/tip) | [Vote on us!](https://top.gg/bot/819276513140670466) | [Support server](https://discord.gg/AYHtS2fzND)' , color = 0x71368a)
 		about.set_thumbnail(url = 'https://cdn.discordapp.com/avatars/749256199702315008/de592db5d4bf3f9378e0773b6f6820ec.png?size=1024')
 		await message.channel.send(embed=about)
 
