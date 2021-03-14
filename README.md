@@ -1,4 +1,3 @@
-Kiddo bot is my project that I am currently working at.
-I really dunno what am I doing right now
+Kiddo bot is my project that I am currently working at, that's my first bot so please don't hate.
 
-Hope u enjoy!
+Hope u enjoy!👶
