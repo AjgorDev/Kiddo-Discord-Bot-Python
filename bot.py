@@ -45,7 +45,7 @@ async def on_message(message):
 
 	if message.content.startswith('$about'):
 		await message.add_reaction('📬')
-		about = discord.Embed(title = '**Hey, My name is Kiddo!**\n***I was made by Ajgor#0001.***\n\n**I am here to tell you some jokes and have fun with this server users!**\n**Use** ***$help*** **command for list of all commands!**', description = '[Invite me!](https://discord.com/api/oauth2/authorize?client_id=819276513140670466&permissions=37088832&scope=bot) | [Donate](https://streamlabs.com/ajgor_rycerski_boj/tip)' , color = 0x71368a)
+		about = discord.Embed(title = '**Hey, My name is Kiddo!**\n***I was made by Ajgor#0001.***\n\n**I am here to tell you some jokes and have fun with this server users!**\n**Use** ***$help*** **command for list of all commands!**', description = '[Invite me!](https://discord.com/api/oauth2/authorize?client_id=819276513140670466&permissions=37088832&scope=bot) | [Donate](https://streamlabs.com/ajgor_rycerski_boj/tip) | [Vote on us!](https://top.gg/bot/819276513140670466)' , color = 0x71368a)
 		about.set_thumbnail(url = 'https://cdn.discordapp.com/avatars/749256199702315008/de592db5d4bf3f9378e0773b6f6820ec.png?size=1024')
 		await message.channel.send(embed=about)
 
@@ -128,7 +128,6 @@ async def on_message(message):
 		helpemb.add_field(name='$undo-report <BETA>', value = 'deletes your last report', inline = False)
 		await message.channel.send(f'**{message.author}**')
 		await message.channel.send(embed=helpemb)
-		#await message.channel.send("**List of commands for Kiddo:**\n\n**$joke** - ***sends random joke***\n\n**$roll** - ***rolls a number from 1 to 10***\n\n**$meme** - ***sends random meme***\n\n**$ping** - ***What can I say... just*** **pong!**\n\n**$iq** - ***shows your IQ***\n\n**$weekend** - ***shows when the weekend will start***\n\n**$lenny** - ***( ͡° ͜ʖ ͡°)***\n\n**$report [name]** - ***report some bad guys like a boss :sunglasses:***\n\n**$undo-report** - ***deletes your recent report***\n\n||**A lot of commands will be added in the future, stay tuned!**||")
 
 	#--------------------------------------------------------------------report system--------------------------------------------------------------------------
 	
