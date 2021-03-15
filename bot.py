@@ -63,8 +63,9 @@ async def on_message(message):
 	if message.content.startswith('$meme'):
 		response_meme = random.choice(memes)
 		await message.add_reaction('🤣')
-		await message.channel.send(f'**{message.author}**')
-		await message.channel.send(response_meme)
+		memeemb = discord.Embed(title = f'Here is meme for **{message.author}** 🤣', color = 0x71368a)
+		memeemb.set_image(url=response_meme)
+		await message.channel.send(embed=memeemb)
 
 	dice = str(random.choice(range(1, 10)))
 
@@ -134,6 +135,12 @@ async def on_message(message):
 		await message.channel.send(f'**{message.author}**')
 		await message.channel.send(embed=version)
 
+	if message.content.startswith('$doge'):
+		await message.add_reaction('🐶')
+		doge = discord.Embed(title = f'Here is doge for **{message.author}** 🐶', color = 0x71368a)
+		doge.set_image(url='https://cdn.discordapp.com/attachments/819916120777555998/820960875133272084/5845e770fb0b0755fa99d7f4.png')
+		await message.channel.send(embed=doge)
+
 	if message.content.startswith('$help'):
 		await message.add_reaction('📬')
 		helpemb = discord.Embed(title = 'List of commands for Kiddo 👶 :', color = 0x71368a)
@@ -146,6 +153,7 @@ async def on_message(message):
 		helpemb.add_field(name='$lenny', value = '( ͡° ͜ʖ ͡°)', inline = False)
 		helpemb.add_field(name='$coinflip', value = 'flips a coin', inline = False)
 		helpemb.add_field(name='$version', value = 'shows current version of bot', inline = False)
+		helpemb.add_field(name='$doge', value = 'sends doge', inline = False)
 		helpemb.add_field(name='$report [name] <BETA>', value = 'report some bad guys like a boss :sunglasses:', inline = False)
 		helpemb.add_field(name='$undo-report <BETA>', value = 'deletes your last report', inline = False)
 		await message.channel.send(f'**{message.author}**')
