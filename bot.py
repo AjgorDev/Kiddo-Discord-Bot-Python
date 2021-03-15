@@ -141,6 +141,25 @@ async def on_message(message):
 		doge.set_image(url='https://cdn.discordapp.com/attachments/819916120777555998/820960875133272084/5845e770fb0b0755fa99d7f4.png')
 		await message.channel.send(embed=doge)
 
+	if message.content.startswith('$cookie'):
+		await message.add_reaction('🍪')
+		cookie = discord.Embed(title = f'Here is cookie for **{message.author}** 🍪', color = 0x71368a)
+		cookie.set_image(url='https://cdn.discordapp.com/attachments/819916120777555998/820974520575590421/cookie_PNG13648.png')
+		await message.channel.send(embed=cookie)
+
+	eightball = [
+		'Yes 🎱',
+		'No 🎱',
+	]
+
+	if message.content.startswith('$8ball'):
+		await message.add_reaction('🎱')
+		eightball_response = random.choice(eightball)
+		eightballemb = discord.Embed(title = f'{eightball_response}', color = 0x71368a)
+		await message.channel.send(f'**{message.author}**')
+		await message.channel.send(embed=eightballemb)
+
+
 	if message.content.startswith('$help'):
 		await message.add_reaction('📬')
 		helpemb = discord.Embed(title = 'List of commands for Kiddo 👶 :', color = 0x71368a)
@@ -154,6 +173,8 @@ async def on_message(message):
 		helpemb.add_field(name='$coinflip', value = 'flips a coin', inline = False)
 		helpemb.add_field(name='$version', value = 'shows current version of bot', inline = False)
 		helpemb.add_field(name='$doge', value = 'sends doge', inline = False)
+		helpemb.add_field(name='$cookie', value = 'gives you a cookie', inline = False)
+		helpemb.add_field(name='$8ball [question]', value = 'helps you with a hard decision')
 		helpemb.add_field(name='$report [name] <BETA>', value = 'report some bad guys like a boss :sunglasses:', inline = False)
 		helpemb.add_field(name='$undo-report <BETA>', value = 'deletes your last report', inline = False)
 		await message.channel.send(f'**{message.author}**')
