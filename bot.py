@@ -128,6 +128,10 @@ async def on_message(message):
 		await message.channel.send(f'**{message.author}**')
 		await message.channel.send(embed=coinflip)
 
+	if message.content.startswith('$version'):
+		await message.add_reaction('🤖')
+		version = discord.Embed(title = 'Current version of Kiddo: 1.1.0')
+
 	if message.content.startswith('$help'):
 		await message.add_reaction('📬')
 		helpemb = discord.Embed(title = 'List of commands for Kiddo 👶 :', color = 0x71368a)
@@ -139,6 +143,7 @@ async def on_message(message):
 		helpemb.add_field(name='$weekend', value = 'shows when the weekend will start', inline = False)
 		helpemb.add_field(name='$lenny', value = '( ͡° ͜ʖ ͡°)', inline = False)
 		helpemb.add_field(name='$coinflip', value = 'flips a coin', inline = False)
+		helpemb.add_field(name='$version', value = 'shows current version of bot', inline = False)
 		helpemb.add_field(name='$report [name] <BETA>', value = 'report some bad guys like a boss :sunglasses:', inline = False)
 		helpemb.add_field(name='$undo-report <BETA>', value = 'deletes your last report', inline = False)
 		await message.channel.send(f'**{message.author}**')
