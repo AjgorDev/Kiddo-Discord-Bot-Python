@@ -130,7 +130,9 @@ async def on_message(message):
 
 	if message.content.startswith('$version'):
 		await message.add_reaction('🤖')
-		version = discord.Embed(title = 'Current version of Kiddo: 1.1.0')
+		version = discord.Embed(title = 'Current version of Kiddo: 1.1.0 🤖', color = 0x71368a)
+		await message.channel.send(f'**{message.author}**')
+		await message.channel.send(embed=version)
 
 	if message.content.startswith('$help'):
 		await message.add_reaction('📬')
