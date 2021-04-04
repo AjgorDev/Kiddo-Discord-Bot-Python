@@ -131,7 +131,7 @@ async def on_message(message):
 
 	if message.content.startswith('$version'):
 		await message.add_reaction('🤖')
-		version = discord.Embed(title = 'Current version of Kiddo: 1.1.0 🤖', color = 0x71368a)
+		version = discord.Embed(title = 'Current version of Kiddo: 1.1.5 🤖', color = 0x71368a)
 		await message.channel.send(f'**{message.author}**')
 		await message.channel.send(embed=version)
 
@@ -150,6 +150,7 @@ async def on_message(message):
 	eightball = [
 		'Yes 🎱',
 		'No 🎱',
+		'Maybe 🎱',
 	]
 
 	if message.content.startswith('$8ball'):
@@ -159,6 +160,111 @@ async def on_message(message):
 		await message.channel.send(f'**{message.author}**')
 		await message.channel.send(embed=eightballemb)
 
+	curse = [
+		'Fuck you 🤬',
+		'You are piece of shit 🤬',
+		'I hate you 🤬',
+		'You are so dumb 🤬',
+	]
+
+	if message.content.startswith('$curse'):
+		await message.add_reaction('🤬')
+		curse_response = random.choice(curse)
+		curseemb = discord.Embed(title = f'{curse_response}', color = 0x71368a)
+		await message.channel.send(f'**{message.author}**')
+		await message.channel.send(embed=curseemb)
+
+	motivate = [
+		'You are so beautiful 😃',
+		'I love you 😃',
+		'Do not give up 😃',
+		'Have a nice day 😃',
+	]
+
+	if message.content.startswith('$motivate'):
+		await message.add_reaction('😃')
+		motivate_response = random.choice(motivate)
+		motivateemb = discord.Embed(title = f'{motivate_response}', color = 0x71368a)
+		await message.channel.send(f'**{message.author}**')
+		await message.channel.send(embed=motivateemb)
+
+#--------------------------------------------------------------emotes----------------------------------------------------------------------
+
+	if message.content.startswith('$blush'):
+		await message.add_reaction('😳')
+		blushemb = discord.Embed(title = f'**{message.author}** 😳', color = 0x71368a)
+		blushemb.set_image(url='https://cdn.discordapp.com/attachments/819916120777555998/828014296788893787/84307582253a96e4552d20e3ecef3a33.gif')
+		await message.channel.send(embed=blushemb)
+
+	if message.content.startswith('$cry'):
+		await message.add_reaction('😢')
+		cryemb = discord.Embed(title = f'**{message.author}** 😢', color = 0x71368a)
+		cryemb.set_image(url='https://cdn.discordapp.com/attachments/819916120777555998/828016094509269002/cry.gif')
+		await message.channel.send(embed=cryemb)
+
+	if message.content.startswith('$dance'):
+		await message.add_reaction('🕺')
+		danceemb = discord.Embed(title = f'**{message.author}** 🕺', color = 0x71368a)
+		danceemb.set_image(url='https://cdn.discordapp.com/attachments/819916120777555998/828191745647837194/dance.gif')
+		await message.channel.send(embed=danceemb)
+
+	if message.content.startswith('$pout'):
+		await message.add_reaction('😡')
+		poutemb = discord.Embed(title = f'**{message.author}** 😡', color = 0x71368a)
+		poutemb.set_image(url='https://cdn.discordapp.com/attachments/823155630767996938/828202565082021918/pout.gif')
+		await message.channel.send(embed=poutemb)
+
+	if message.content.startswith('$shrug'):
+		await message.add_reaction('🤷')
+		shrugemb = discord.Embed(title = f'**{message.author}** 🤷', color = 0x71368a)
+		shrugemb.set_image(url='https://cdn.discordapp.com/attachments/823155630767996938/828203963169374208/shrug.gif')
+		await message.channel.send(embed=shrugemb)
+
+	if message.content.startswith('$sleepy'):
+		await message.add_reaction('😴')
+		sleepyemb = discord.Embed(title = f'**{message.author}** 😴', color = 0x71368a)
+		sleepyemb.set_image(url='https://cdn.discordapp.com/attachments/823155630767996938/828205263445033030/sleepy.gif')
+		await message.channel.send(embed=sleepyemb)
+
+	if message.content.startswith('$smile'):
+		await message.add_reaction('😊')
+		smileemb = discord.Embed(title = f'**{message.author}** 😊', color = 0x71368a)
+		smileemb.set_image(url='https://cdn.discordapp.com/attachments/823155630767996938/828208980962443264/smile.gif')
+		await message.channel.send(embed=smileemb)
+
+	if message.content.startswith('$thumbsup'):
+		await message.add_reaction('👍')
+		thumbsupemb = discord.Embed(title = f'**{message.author}** 👍', color = 0x71368a)
+		thumbsupemb.set_image(url='https://cdn.discordapp.com/attachments/823155630767996938/828210539712479312/thumbsup.gif')
+		await message.channel.send(embed=thumbsupemb)
+
+	if message.content.startswith('$triggered'):
+		await message.add_reaction('😠')
+		triggeredemb = discord.Embed(title = f'**{message.author}** 😠', color = 0x71368a)
+		triggeredemb.set_image(url='https://cdn.discordapp.com/attachments/823155630767996938/828213252055105536/triggered.gif')
+		await message.channel.send(embed=triggeredemb)
+
+#--------------------------------------------------------------------actions------------------------------------------------------------------------------
+
+	if message.content.startswith('$hug'):
+		await message.add_reaction('🤗')
+		hugemb = discord.Embed(title = f'**{message.author}** 🤗', color = 0x71368a)
+		hugemb.set_image(url='https://cdn.discordapp.com/attachments/823155630767996938/828219913382395934/hug.gif')
+		await message.channel.send(embed=hugemb)
+
+	if message.content.startswith('$kiss'):
+		await message.add_reaction('💋')
+		kissemb = discord.Embed(title = f'**{message.author}** 💋', color = 0x71368a)
+		kissemb.set_image(url='https://cdn.discordapp.com/attachments/823155630767996938/828221396378320946/kiss.gif')
+		await message.channel.send(embed=kissemb)
+
+	if message.content.startswith('$kill'):
+		await message.add_reaction('🔪')
+		killemb = discord.Embed(title = f'**{message.author}** 🔪', color = 0x71368a)
+		killemb.set_image(url='https://cdn.discordapp.com/attachments/823155630767996938/828222584955863040/kill.gif')
+		await message.channel.send(embed=killemb)
+
+#------------------------------------------------------------------lists-------------------------------------------------------------------
 
 	if message.content.startswith('$help'):
 		await message.add_reaction('📬')
@@ -174,26 +280,54 @@ async def on_message(message):
 		helpemb.add_field(name='$version', value = 'shows current version of bot', inline = False)
 		helpemb.add_field(name='$doge', value = 'sends doge', inline = False)
 		helpemb.add_field(name='$cookie', value = 'gives you a cookie', inline = False)
-		helpemb.add_field(name='$8ball [question]', value = 'helps you with a hard decision')
-		helpemb.add_field(name='$report [name] <BETA>', value = 'report some bad guys like a boss :sunglasses:', inline = False)
-		helpemb.add_field(name='$undo-report <BETA>', value = 'deletes your last report', inline = False)
+		helpemb.add_field(name='$8ball [question]', value = 'helps you with a hard decision', inline = False)
+		helpemb.add_field(name='$curse', value = 'demotivate yourself in weird way', inline = False)
+		helpemb.add_field(name='$motivate', value = 'motivate yourself in weird way', inline = False)
+		helpemb.add_field(name='$emotes', value = 'shows a list of emotes', inline = False)
+		helpemb.add_field(name='$actions', value = 'shows a list of actions', inline = False)
+#		helpemb.add_field(name='$report [name] <BETA>', value = 'report some bad guys like a boss :sunglasses:', inline = False)
+#		helpemb.add_field(name='$undo-report <BETA>', value = 'deletes your last report', inline = False)
 		await message.channel.send(f'**{message.author}**')
 		await message.channel.send(embed=helpemb)
 
+	if message.content.startswith('$emotes'):
+		await message.add_reaction('📬')
+		emoteemb = discord.Embed(title = 'List of emotes which you can use with Kiddo 👶 :', color = 0x71368a)
+		emoteemb.add_field(name='$blush', value = '😳', inline = False)
+		emoteemb.add_field(name='$cry', value = '😢', inline = False)
+		emoteemb.add_field(name='$dance', value = '🕺', inline = False)
+		emoteemb.add_field(name='$pout', value = '😡', inline = False)
+		emoteemb.add_field(name='$shrug', value = '🤷' , inline = False)
+		emoteemb.add_field(name='$sleepy', value = '😴' , inline = False)
+		emoteemb.add_field(name='$smile', value = '😊' ,inline = False)
+		emoteemb.add_field(name='$thumbsup', value = '👍' , inline = False)
+		emoteemb.add_field(name='$triggered', value = '😠' , inline = False)
+		await message.channel.send(f'**{message.author}**')
+		await message.channel.send(embed=emoteemb)
+
+	if message.content.startswith('$actions'):
+		await message.add_reaction('📬')
+		actionsemb = discord.Embed(title = 'List of actions which you can use with Kiddo 👶 :', color = 0x71368a)
+		actionsemb.add_field(name='$hug', value = 'hug someone', inline = False)
+		actionsemb.add_field(name='$kiss', value = 'kiss someone', inline = False)
+		actionsemb.add_field(name='$kill', value = 'kill someone', inline = False)
+		await message.channel.send(f'**{message.author}**')
+		await message.channel.send(embed=actionsemb)
+
 	#--------------------------------------------------------------------report system--------------------------------------------------------------------------
 	
-	if message.content.startswith('$report'):
-		await message.add_reaction('❗')
-		report = discord.Embed(title = 'Your report has been sent ✅', color = 0x71368a)
-		await message.channel.send(f'**{message.author}**')
-		await message.channel.send(embed=report)
-		print(message.author,':',message.content)
+#	if message.content.startswith('$report'):
+#		await message.add_reaction('❗')
+#		report = discord.Embed(title = 'Your report has been sent ✅', color = 0x71368a)
+#		await message.channel.send(f'**{message.author}**')
+#		await message.channel.send(embed=report)
+#		print(message.author,':',message.content)
 
-	if message.content.startswith('$undo-report'):
-		await message.add_reaction('✅')
-		undoreport = discord.Embed(title = 'Your report has been deleted ✅', color = 0x71368a)
-		await message.channel.send(f'**{message.author}**')
-		await message.channel.send(embed=undoreport)
-		print(message.author,':',message.content)
+#	if message.content.startswith('$undo-report'):
+#		await message.add_reaction('✅')
+#		undoreport = discord.Embed(title = 'Your report has been deleted ✅', color = 0x71368a)
+#		await message.channel.send(f'**{message.author}**')
+#		await message.channel.send(embed=undoreport)
+#		print(message.author,':',message.content)
 
 client.run(TOKEN)
